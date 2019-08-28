@@ -25,7 +25,7 @@ public class GreetingDTO implements Serializable {
     @Override
     public String toString() {
         return "GreetingDTO{" +
-                "message='" + message + '\'' +
+                "message:'" + message + '\'' +
                 '}';
     }
 
