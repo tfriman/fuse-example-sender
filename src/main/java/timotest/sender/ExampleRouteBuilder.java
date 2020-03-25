@@ -50,6 +50,13 @@ public class ExampleRouteBuilder extends RouteBuilder {
                 .log("sending ${body}")
                 .to(SEND_ROUTE);
 
+        rest("/message-sink")
+                .description("Used for getting messages...")
+                .post()
+                .route()
+                .routeId("rest-message-sink-route")
+                .log("got message:${body}")
+                .end();
 
         from(SEND_ROUTE)
                 .routeId("send-rest-route")
